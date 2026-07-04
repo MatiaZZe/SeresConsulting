@@ -1,14 +1,291 @@
-.why p {
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #eaf1f6;
+  color: #111111;
+}
+
+.website {
+  width: 1180px;
+  margin: 25px auto;
+  background-color: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 90px;
+  padding: 0 80px;
+  background-color: white;
+  border-bottom: 1px solid #e5edf3;
+}
+
+.navbar img {
+  width: 58px;
+  vertical-align: middle;
+  margin-right: 55px;
+  margin-top: 16px;
+}
+
+.navbar a {
+  display: inline-block;
+  color: #111111;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 800;
+  margin-right: 48px;
+  vertical-align: middle;
+  padding-top: 35px;
+}
+
+.navbar a:hover {
+  color: #236f9f;
+}
+
+/* HERO */
+
+.hero {
+  padding: 85px 80px;
+  background: linear-gradient(135deg, #ffffff, #f0f6fa);
+}
+
+.hero-left {
+  display: inline-block;
+  width: 58%;
+  vertical-align: middle;
+}
+
+.hero-left h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 76px;
+  line-height: 1.05;
+  margin: 0 0 25px 0;
+  color: #0b1724;
+}
+
+.hero-left p {
+  width: 90%;
+  font-size: 19px;
+  line-height: 1.8;
+  color: #4a5864;
+  margin-bottom: 35px;
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: #236f9f;
+  color: white;
+  text-decoration: none;
+  padding: 16px 34px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 800;
+  box-shadow: 0 12px 25px rgba(35, 111, 159, 0.25);
+}
+
+.hero-right {
+  display: inline-block;
+  width: 38%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.logo-card {
+  background: linear-gradient(135deg, #2d6f9f, #7da8c8);
+  padding: 45px;
+  border-radius: 28px;
+  box-shadow: 0 20px 40px rgba(35, 111, 159, 0.25);
+}
+
+.logo-card img {
+  width: 260px;
+  background-color: #dedbd5;
+  border-radius: 50%;
+  padding: 18px;
+}
+
+/* BAD CREDIT */
+
+.bad-credit {
+  width: 820px;
+  margin: auto;
+  padding: 75px 0;
+}
+
+.bad-credit h2,
+.steps h2,
+.contact-section h2,
+.benefits-section h2,
+.why-section h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 38px;
+  margin: 0 0 20px 0;
+  color: #0b1724;
+}
+
+.bad-credit p {
   font-size: 18px;
   line-height: 1.8;
-  color: #43515c;
+  color: #4a5864;
+}
+
+.bad-credit ul {
+  margin-top: 25px;
+  padding-left: 25px;
+}
+
+.bad-credit li {
+  font-size: 17px;
+  line-height: 2;
+  color: #33434f;
+}
+
+/* STEPS */
+
+.steps {
+  width: 920px;
+  margin: auto;
+  padding: 70px 0;
+  border-top: 1px solid #dce8f0;
+}
+
+.step-card {
+  display: inline-block;
+  width: 30%;
+  min-height: 245px;
+  vertical-align: top;
+  margin-right: 2.5%;
+  background-color: #f7fafc;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #e1ebf2;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.05);
+}
+
+.step-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #236f9f;
+  font-size: 48px;
+  margin: 0 0 15px 0;
+}
+
+.step-card h4 {
+  font-size: 20px;
+  margin: 0 0 12px 0;
+  color: #0b1724;
+}
+
+.step-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4a5864;
+}
+
+/* IMAGE */
+
+.image-section {
+  width: 920px;
+  margin: auto;
+  padding: 10px 0 85px 0;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.14);
+}
+
+/* CONTACT */
+
+.contact-section {
+  text-align: center;
+  padding: 80px 200px;
+  background: linear-gradient(135deg, #f8fbfd, #eef5fa);
+  border-top: 1px solid #dce8f0;
+  border-bottom: 1px solid #dce8f0;
+}
+
+.contact-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #4a5864;
+}
+
+.contact-section h3 {
+  display: inline-block;
+  background-color: #236f9f;
+  color: white;
+  padding: 15px 34px;
+  border-radius: 40px;
+  font-size: 20px;
+  margin-top: 18px;
+}
+
+/* BENEFITS */
+
+.benefits-section {
+  width: 1000px;
+  margin: auto;
+  padding: 80px 0;
+}
+
+.benefit-card {
+  display: inline-block;
+  width: 23%;
+  min-height: 180px;
+  vertical-align: top;
+  margin-right: 1.5%;
+  background-color: white;
+  padding: 28px 22px;
+  border-radius: 20px;
+  border: 1px solid #e1ebf2;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+}
+
+.benefit-card h4 {
+  color: #236f9f;
+  font-size: 20px;
+  margin: 0 0 12px 0;
+}
+
+.benefit-card p {
+  color: #4a5864;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* WHY */
+
+.why-section {
+  width: 840px;
+  margin: auto;
+  text-align: center;
+  padding: 75px 0;
+  border-top: 1px solid #bfd3e3;
+}
+
+.why-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #4a5864;
 }
 
 /* SERVICES */
 
 .services {
   width: 820px;
-  margin: 0 auto 95px auto;
+  margin: 0 auto 90px auto;
   border-radius: 22px;
   overflow: hidden;
   border: 1px solid #dce8f0;
@@ -16,14 +293,13 @@
 }
 
 .services h2 {
-  background: linear-gradient(135deg, #2f6f9f, #8fb0cc);
+  background: linear-gradient(135deg, #2d6f9f, #8fb0cc);
   color: white;
   text-align: center;
   padding: 24px;
   margin: 0;
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 30px;
-  font-weight: 600;
 }
 
 .services ul {
@@ -41,75 +317,4 @@
 
 .services li:last-child {
   border-bottom: none;
-}
-
-/* MOBILE / SMALL SCREEN */
-
-@media screen and (max-width: 900px) {
-  .page {
-    width: 95%;
-    margin: 15px auto;
-  }
-
-  .navbar {
-    text-align: center;
-    padding: 22px;
-  }
-
-  .navbar img {
-    display: block;
-    margin: 0 auto 18px auto;
-  }
-
-  .navbar a {
-    display: inline-block;
-    margin: 8px 12px;
-    font-size: 14px;
-  }
-
-  .hero {
-    padding: 65px 25px;
-  }
-
-  .hero h1 {
-    font-size: 56px;
-    letter-spacing: -1px;
-  }
-
-  .hero-box,
-  .section,
-  .steps,
-  .image-section,
-  .benefits,
-  .why,
-  .services {
-    width: 86%;
-  }
-
-  .hero-box {
-    padding: 35px;
-  }
-
-  .hero-box img {
-    width: 220px;
-  }
-
-  .section h2,
-  .steps h2,
-  .contact h2,
-  .benefits h2,
-  .why h2 {
-    font-size: 34px;
-  }
-
-  .step,
-  .benefit {
-    display: block;
-    width: 100%;
-    margin-bottom: 22px;
-  }
-
-  .contact {
-    padding: 65px 40px;
-  }
 }
