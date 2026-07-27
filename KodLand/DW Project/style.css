@@ -1,3 +1,10 @@
+/* GOOGLE FONTS USED:
+   Montserrat
+   Playfair Display
+*/
+
+/* GENERAL RESET */
+
 * {
   box-sizing: border-box;
 }
@@ -13,22 +20,27 @@ body {
   color: #111111;
 }
 
+/* WEBSITE CONTAINER */
+
 .website {
-  width: 1180px;
-  margin: 25px auto;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   background-color: white;
-  border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.10);
 }
 
-/* NAVBAR */
+/* NAVBAR - STICKY POSITION */
 
 .navbar {
   height: 90px;
-  padding: 0 80px;
+  padding: 0 90px;
   background-color: white;
   border-bottom: 1px solid #e5edf3;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar img {
@@ -42,40 +54,55 @@ body {
   display: inline-block;
   color: #111111;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 800;
   margin-right: 48px;
   vertical-align: middle;
   padding-top: 35px;
+  transition: 0.3s;
 }
+
+/* PSEUDO-CLASS */
 
 .navbar a:hover {
   color: #236f9f;
+  transform: translateY(-2px);
 }
 
 /* HERO */
 
 .hero {
-  padding: 85px 80px;
+  padding: 95px 90px;
   background: linear-gradient(135deg, #ffffff, #f0f6fa);
 }
 
-.hero-left {
+.hero-text {
   display: inline-block;
-  width: 58%;
+  width: 56%;
   vertical-align: middle;
+  animation: fadeUp 1s ease;
 }
 
-.hero-left h1 {
+.small-title {
+  display: inline-block;
+  color: #236f9f;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.hero-text h1 {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 76px;
+  font-size: 82px;
   line-height: 1.05;
   margin: 0 0 25px 0;
   color: #0b1724;
 }
 
-.hero-left p {
-  width: 90%;
+.hero-description {
+  width: 88%;
   font-size: 19px;
   line-height: 1.8;
   color: #4a5864;
@@ -92,35 +119,65 @@ body {
   font-size: 16px;
   font-weight: 800;
   box-shadow: 0 12px 25px rgba(35, 111, 159, 0.25);
+  transition: 0.3s;
 }
 
-.hero-right {
+/* PSEUDO-CLASSES + TRANSFORM */
+
+.hero-button:hover {
+  background-color: #174f75;
+  transform: translateY(-5px);
+}
+
+.hero-button:active {
+  transform: translateY(0);
+}
+
+.hero-card {
   display: inline-block;
-  width: 38%;
+  width: 40%;
   vertical-align: middle;
   text-align: center;
+  background: linear-gradient(135deg, #2f6f9f, #7fa9c8);
+  padding: 55px 40px;
+  border-radius: 32px;
+  border: 1px solid #d8e6ef;
+  box-shadow: 0 25px 55px rgba(35, 111, 159, 0.25);
+  animation: fadeUp 1.2s ease;
+  transition: 0.3s;
 }
 
-.logo-card {
-  background: linear-gradient(135deg, #2d6f9f, #7da8c8);
-  padding: 45px;
-  border-radius: 28px;
-  box-shadow: 0 20px 40px rgba(35, 111, 159, 0.25);
+.hero-card:hover {
+  transform: scale(1.03);
 }
 
-.logo-card img {
+.hero-card img {
   width: 260px;
   background-color: #dedbd5;
   border-radius: 50%;
   padding: 18px;
+  margin-bottom: 25px;
+}
+
+.hero-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 30px;
+  margin: 0 0 12px 0;
+  color: white;
+}
+
+.hero-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #eef6fb;
 }
 
 /* BAD CREDIT */
 
 .bad-credit {
-  width: 820px;
+  width: 80%;
   margin: auto;
-  padding: 75px 0;
+  padding: 80px 0;
 }
 
 .bad-credit h2,
@@ -129,9 +186,24 @@ body {
 .benefits-section h2,
 .why-section h2 {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 38px;
+  font-size: 40px;
   margin: 0 0 20px 0;
   color: #0b1724;
+}
+
+/* PSEUDO-ELEMENT */
+
+.bad-credit h2::after,
+.steps h2::after,
+.benefits-section h2::after,
+.why-section h2::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 4px;
+  background-color: #236f9f;
+  border-radius: 10px;
+  margin-top: 14px;
 }
 
 .bad-credit p {
@@ -154,29 +226,38 @@ body {
 /* STEPS */
 
 .steps {
-  width: 920px;
+  width: 80%;
   margin: auto;
-  padding: 70px 0;
+  padding: 75px 0;
   border-top: 1px solid #dce8f0;
 }
 
 .step-card {
   display: inline-block;
-  width: 30%;
-  min-height: 245px;
+  width: 31%;
+  min-height: 250px;
   vertical-align: top;
-  margin-right: 2.5%;
+  margin-right: 2%;
   background-color: #f7fafc;
-  padding: 30px;
-  border-radius: 20px;
+  padding: 32px;
+  border-radius: 22px;
   border: 1px solid #e1ebf2;
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* TRANSFORM */
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 38px rgba(0, 0, 0, 0.1);
 }
 
 .step-card h3 {
   font-family: 'Playfair Display', Georgia, serif;
   color: #236f9f;
-  font-size: 48px;
+  font-size: 52px;
   margin: 0 0 15px 0;
 }
 
@@ -195,22 +276,27 @@ body {
 /* IMAGE */
 
 .image-section {
-  width: 920px;
+  width: 80%;
   margin: auto;
-  padding: 10px 0 85px 0;
+  padding: 10px 0 90px 0;
 }
 
 .image-section img {
   width: 100%;
-  border-radius: 24px;
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.14);
+  border-radius: 26px;
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.14);
+  transition: 0.3s;
+}
+
+.image-section img:hover {
+  transform: scale(1.02);
 }
 
 /* CONTACT */
 
 .contact-section {
   text-align: center;
-  padding: 80px 200px;
+  padding: 85px 200px;
   background: linear-gradient(135deg, #f8fbfd, #eef5fa);
   border-top: 1px solid #dce8f0;
   border-bottom: 1px solid #dce8f0;
@@ -222,35 +308,50 @@ body {
   color: #4a5864;
 }
 
-.contact-section h3 {
+.contact-button {
   display: inline-block;
   background-color: #236f9f;
   color: white;
+  text-decoration: none;
   padding: 15px 34px;
   border-radius: 40px;
   font-size: 20px;
+  font-weight: 800;
   margin-top: 18px;
+  transition: 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #174f75;
+  transform: translateY(-5px);
 }
 
 /* BENEFITS */
 
 .benefits-section {
-  width: 1000px;
+  width: 80%;
   margin: auto;
-  padding: 80px 0;
+  padding: 85px 0;
 }
 
 .benefit-card {
   display: inline-block;
-  width: 23%;
-  min-height: 180px;
+  width: 23.5%;
+  min-height: 185px;
   vertical-align: top;
-  margin-right: 1.5%;
+  margin-right: 1%;
   background-color: white;
-  padding: 28px 22px;
-  border-radius: 20px;
+  padding: 30px 24px;
+  border-radius: 22px;
   border: 1px solid #e1ebf2;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 38px rgba(0, 0, 0, 0.1);
 }
 
 .benefit-card h4 {
@@ -268,11 +369,16 @@ body {
 /* WHY */
 
 .why-section {
-  width: 840px;
+  width: 80%;
   margin: auto;
   text-align: center;
-  padding: 75px 0;
+  padding: 80px 0;
   border-top: 1px solid #bfd3e3;
+}
+
+.why-section h2::after {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .why-section p {
@@ -284,8 +390,8 @@ body {
 /* SERVICES */
 
 .services {
-  width: 820px;
-  margin: 0 auto 90px auto;
+  width: 80%;
+  margin: 0 auto 95px auto;
   border-radius: 22px;
   overflow: hidden;
   border: 1px solid #dce8f0;
@@ -299,12 +405,12 @@ body {
   padding: 24px;
   margin: 0;
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 30px;
+  font-size: 32px;
 }
 
 .services ul {
   margin: 0;
-  padding: 38px 58px;
+  padding: 40px 60px;
   background-color: white;
 }
 
@@ -317,4 +423,90 @@ body {
 
 .services li:last-child {
   border-bottom: none;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 700px) {
+  .website {
+    width: 100%;
+    margin: 0;
+  }
+
+  .navbar {
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .navbar img {
+    display: block;
+    margin: 0 auto 15px auto;
+  }
+
+  .navbar a {
+    padding-top: 0;
+    margin: 8px 12px;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 60px 30px;
+  }
+
+  .hero-text,
+  .hero-card {
+    display: block;
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 50px;
+  }
+
+  .hero-description {
+    width: 100%;
+  }
+
+  .hero-card {
+    margin-top: 40px;
+  }
+
+  .hero-card img {
+    width: 220px;
+  }
+
+  .bad-credit,
+  .steps,
+  .image-section,
+  .benefits-section,
+  .why-section,
+  .services {
+    width: 86%;
+  }
+
+  .step-card,
+  .benefit-card {
+    display: block;
+    width: 100%;
+    margin-bottom: 22px;
+  }
+
+  .contact-section {
+    padding: 60px 35px;
+  }
 }
